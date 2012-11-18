@@ -29,10 +29,3 @@ We'll walk through the basic steps of building up a contrived package **funniest
 .. note::
 
    At this time, this documentation focuses on Python 2.x only, and may not be *as* applicable to packages targeted to Python 3.x.
-
-
-Indices
-=======
-
-* :ref:`genindex`
-* :ref:`search`

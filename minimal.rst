@@ -56,11 +56,11 @@ The main setup config file, ``setup.py``, should contain a single call to ``setu
 
 Now we can install the package locally (for use on our system), with::
 
-    python setup.py install
+    $ python setup.py install
 
 We can also install the package with a symlink, so that changes to the source files will be immediately available to other users of the package on our system::
 
-    python setup.py develop
+    $ python setup.py develop
 
 Anywhere else in our system using the same Python, we can do this now::
 
@@ -75,7 +75,7 @@ The ``setup.py`` script is also our main entrypoint to register the package name
 
 To "register" the package (this will reserve the name, upload package metadata, and create the pypi.python.org webpage)::
 
-    python setup.py register
+    $ python setup.py register
 
 If you haven't published things on PyPI before, you'll need to create an account by following the steps provided at this point.
 
@@ -87,17 +87,17 @@ Although users can follow the URL link to find our git repository, we'll probabl
 
 First create a source distribution with::
 
-    python setup.py sdist
+    $ python setup.py sdist
 
 This will create ``dist/funniest-0.1.tar.gz`` inside our top-level directory. If you like, copy that file to another host and try unpacking it and install it, just to verify that it works for you.
 
 That file can then be uploaded to PyPI with::
 
-    python setup.py upload
+    $ python setup.py upload
 
 You can combine all of these steps, to update metadata and publish a new build in a single step::
 
-    python setup.py register sdist upload
+    $ python setup.py register sdist upload
 
 
 Installing the Package
