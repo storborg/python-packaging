@@ -22,7 +22,6 @@ We'll walk through the basic steps of building up a contrived package **funniest
    testing
    command-line-scripts
    non-code-files
-   documentation
    everything
    about
 
