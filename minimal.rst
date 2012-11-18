@@ -111,9 +111,9 @@ At this point, other consumers of this package can install the package with ``ea
 
     easy_install funniest
 
-Or better yet, ``pip``:
+Or better yet, ``pip``::
 
-    pip install funniest
+    $ pip install funniest
 
 They can specify it as a dependency for another package, and it will be automatically installed when that package is installed (we'll get to how to do that later).
 
