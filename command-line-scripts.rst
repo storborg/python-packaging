@@ -84,7 +84,7 @@ The ``main()`` function can then be registered like so::
         ...
     )
 
-Again, once the package has been installed, we can use it in the same way.
+Again, once the package has been installed, we can use it in the same way. Setuptools will generate a standalone script 'shim' which imports your module and calls the registered function.
 
 This method has the advantage that it's very easily testable. Instead of having to shell out to spawn the script, we can have a test case that just does something like::
 
