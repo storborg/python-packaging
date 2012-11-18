@@ -99,6 +99,10 @@ You can combine all of these steps, to update metadata and publish a new build i
 
     $ python setup.py register sdist upload
 
+For a detailed list of all available setup.py commands, do::
+
+    $ python setup.py --help-commands
+
 
 Installing the Package
 ~~~~~~~~~~~~~~~~~~~~~~

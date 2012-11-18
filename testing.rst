@@ -25,6 +25,7 @@ The ``test_joke.py`` file is our first test file. Although it's overkill for now
 
 The best way to get these tests going (particularly if you're not sure what to use) is `Nose <https://nose.readthedocs.org/en/latest/>`_. With those files added, it's just a matter of running this from the root of the repository::
 
+    $ pip install nose
     $ nosetests
 
 To integrate this with our ``setup.py``, and ensure that Nose is installed when we run the tests, we'll add a few lines to ``setup()``::
