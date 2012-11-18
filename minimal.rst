@@ -156,7 +156,7 @@ There's one more thing we'll probably want in a 'bare bones' package: a ``.gitig
     /dist/
 
     # Python egg metadata, regenerated from source files by setuptools.
-    /maitai.egg-info
+    /*.egg-info
 
 
 That's All You Need
