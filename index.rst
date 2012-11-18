@@ -34,3 +34,5 @@ We'll walk through the basic steps of building up a contrived package **funniest
     `Setuptools Documentation <http://peak.telecommunity.com/DevCenter/setuptools>`_
         Core setuptools documentation and API reference.
 
+    `Hitchhiker's Guide to Packaging <http://guide.python-distribute.org>`_
+        Similar guidelines and a tutorial for the use of Distribute, a fork of Setuptools which will be the future of Python packaging in Python 3.x and beyond.
