@@ -63,10 +63,14 @@ Now we can use it in setup.py like::
 
     from setuptools import setup
 
+    def readme():
+        with open('README.rst') as f:
+            return f.read()
+
     setup(name='funniest',
           version='0.1',
           description='The funniest joke in the world',
-          long_description=open('README.rst').read(),
+          long_description=readme(),
           classifiers=[
             'Development Status :: 3 - Alpha',
             'License :: OSI Approved :: MIT License',
