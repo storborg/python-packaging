@@ -141,7 +141,7 @@ In ``text.py``::
         return (u'Wenn ist das Nunst\u00fcck git und Slotermeyer? Ja! ... '
                 u'Beiherhund das Oder die Flipperwaldt gersput.')
 
-All additional Python code belongs in the ``funniest/funnest/`` directory.
+All additional Python code belongs in the ``funniest/funniest/`` directory.
 
 
 Ignoring Files (.gitignore, etc)
