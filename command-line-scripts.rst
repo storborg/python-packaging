@@ -55,12 +55,12 @@ In this case, we'll add a new file and function to support the command line tool
     funniest/
         funniest/
             __init__.py
-            cmd.py
+            command_line.py
             ...
         setup.py
         ...
 
-The ``cmd.py`` submodule exists only to service the command line tool (which is a convenient organization method)::
+The ``command_line.py`` submodule exists only to service the command line tool (which is a convenient organization method)::
 
     import funniest
 
@@ -70,8 +70,8 @@ The ``cmd.py`` submodule exists only to service the command line tool (which is 
 You can test the "script" by running it directly, e.g.::
 
     $ python
-    >>> import funniest.cmd
-    >>> funniest.cmd.main()
+    >>> import funniest.command_line
+    >>> funniest.command_line.main()
     ...
 
 The ``main()`` function can then be registered like so::
@@ -79,7 +79,7 @@ The ``main()`` function can then be registered like so::
     setup(
         ...
         entry_points = {
-            'console_scripts': ['funniest-joke=funniest.cmd:main'],
+            'console_scripts': ['funniest-joke=funniest.command_line:main'],
         }
         ...
     )
@@ -89,7 +89,7 @@ Again, once the package has been installed, we can use it in the same way. Setup
 This method has the advantage that it's very easily testable. Instead of having to shell out to spawn the script, we can have a test case that just does something like::
 
     from unittest import TestCase
-    from funniest.cmd import main
+    from funniest.command_line import main
 
     class TestConsole(TestCase):
         def test_basic(self):

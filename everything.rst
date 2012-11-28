@@ -6,11 +6,11 @@ Our whole package, for reference, looks like this::
     funniest/
         funniest/
             __init__.py
-            cmd.py
+            command_line.py
             tests/
                 __init__.py
                 test_joke.py
-                test_cmd.py
+                test_command_line.py
         MANIFEST.in
         README.rst
         setup.py
@@ -22,9 +22,9 @@ Here is the contents of each file:
 
 .. literalinclude:: funniest/funniest/__init__.py
 
-**funniest/cmd.py**
+**funniest/command_line.py**
 
-.. literalinclude:: funniest/funniest/cmd.py
+.. literalinclude:: funniest/funniest/command_line.py
 
 **funniest/tests/__init__.py**
 
@@ -34,9 +34,9 @@ Here is the contents of each file:
 
 .. literalinclude:: funniest/funniest/tests/test_joke.py
 
-**funniest/tests/test_cmd.py**
+**funniest/tests/test_command_line.py**
 
-.. literalinclude:: funniest/funniest/tests/test_cmd.py
+.. literalinclude:: funniest/funniest/tests/test_command_line.py
 
 **MANIFEST.in**
 
