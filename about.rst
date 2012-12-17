@@ -1,5 +1,5 @@
 About This Tutorial / Contributing
-----------------------------------
+==================================
 
 Scott Torborg - `storborg@gmail.com <mailto:storborg@gmail.com>`_.
 

@@ -1,5 +1,5 @@
 Minimal Structure
------------------
+=================
 
 We'll start with some Python code. Native German speakers, `please proceed with caution <http://www.youtube.com/watch?v=8gpjk_MaCGM>`_::
 

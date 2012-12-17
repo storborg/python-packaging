@@ -1,5 +1,5 @@
 Specifying Dependencies
------------------------
+=======================
 
 If you're using Python, odds are you're going to want to use other public packages from PyPI or elsewhere.
 

@@ -1,5 +1,5 @@
 Putting It All Together
------------------------
+=======================
 
 Our whole package, for reference, looks like this::
 

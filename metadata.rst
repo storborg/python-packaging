@@ -1,5 +1,5 @@
 Better Package Metadata
------------------------
+=======================
 
 The ``setuptools.setup()`` call accepts a variety of keyword arguments to specify additional metadata about your package. This can help people find your package and evaluate quickly whether or not it is what they're looking for.::
 

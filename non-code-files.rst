@@ -1,5 +1,5 @@
 Adding Non-Code Files
----------------------
+=====================
 
 Often packages will need to depend on files which are not ``.py`` files: e.g. images, data tables, documentation, etc. Those files need special treatment in order for setuptools to handle them correctly.
 

@@ -1,5 +1,5 @@
 Let There Be Tests
-------------------
+==================
 
 The **funniest** package needs some tests. These should be placed in a submodule of ``funniest.`` so that they can be imported, but won't pollute the global namespace.::
 

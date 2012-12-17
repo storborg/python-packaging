@@ -1,5 +1,5 @@
 Command Line Scripts
---------------------
+====================
 
 Many Python packages include command line tools. This is useful for distributing support tools which are associated with a library, or just taking advantage of the setuptools / PyPI infrastructure to distribute a command line tool that happens to use Python.
 
