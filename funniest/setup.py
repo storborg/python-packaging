@@ -1,7 +1,7 @@
 from setuptools import setup
 
 def readme():
-    with open('README.rst') as f:
+    with open('README.rst.example') as f:
         return f.read()
 
 setup(name='funniest',
@@ -26,6 +26,6 @@ setup(name='funniest',
       test_suite='nose.collector',
       tests_require=['nose', 'nose-cover3'],
       entry_points={
-          'console_scripts': ['funniest-joke=funniest.cmd:main'],
+          'console_scripts': ['funniest-joke=funniest.command_line:main'],
       },
       zip_safe=False)
