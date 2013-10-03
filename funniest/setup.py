@@ -28,4 +28,5 @@ setup(name='funniest',
       entry_points={
           'console_scripts': ['funniest-joke=funniest.command_line:main'],
       },
+      include_package_data=True,
       zip_safe=False)

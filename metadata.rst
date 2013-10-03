@@ -24,6 +24,7 @@ The ``setuptools.setup()`` call accepts a variety of keyword arguments to specif
           install_requires=[
               'markdown',
           ],
+          include_package_data=True,
           zip_safe=False)
 
 For a full list of the possible arguments to ``classifiers``, visit http://pypi.python.org/pypi?%3Aaction=list_classifiers.
@@ -86,6 +87,7 @@ Now we can use it in setup.py like::
           install_requires=[
               'markdown',
           ],
+          include_package_data=True,
           zip_safe=False)
 
 When the repo is hosted on GitHub or BitBucket, the README.rst file will also automatically be picked up and used as a 'homepage' for the project.
