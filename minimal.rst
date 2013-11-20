@@ -93,7 +93,7 @@ This will create ``dist/funniest-0.1.tar.gz`` inside our top-level directory. If
 
 That file can then be uploaded to PyPI with::
 
-    $ python setup.py upload
+    $ python setup.py sdist upload
 
 You can combine all of these steps, to update metadata and publish a new build in a single step::
 
