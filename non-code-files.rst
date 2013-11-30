@@ -9,7 +9,7 @@ The mechanism that provides this is the ``MANIFEST.in`` file. This is relatively
     include docs/*.txt
     include funniest/data.json
 
-In order for these files to be copied at install time to the package's folder inside ``site-packages``, you'll need to supply ``include_package_true=True`` to the ``setup()`` function.
+In order for these files to be copied at install time to the package's folder inside ``site-packages``, you'll need to supply ``include_package_data=True`` to the ``setup()`` function.
 
 .. note::
 
