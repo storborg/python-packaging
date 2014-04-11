@@ -40,7 +40,7 @@ When we install the package, setuptools will copy the script to our PATH and mak
 
     $ funniest-joke
 
-This has advantage of being generalizeable to non-python scripts, as well: ``funniset-joke`` could be a shell script, or something completely different.
+This has advantage of being generalizeable to non-python scripts, as well: ``funniest-joke`` could be a shell script, or something completely different.
 
 
 The ``console_scripts`` Entry Point
