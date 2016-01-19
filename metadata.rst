@@ -90,4 +90,4 @@ Now we can use it in setup.py like::
           include_package_data=True,
           zip_safe=False)
 
-When the repo is hosted on GitHub or BitBucket, the README.rst file will also automatically be picked up and used as a 'homepage' for the project.
+When the repo is hosted on GitHub or BitBucket, the ``README.rst`` file will also automatically be picked up and used as a 'homepage' for the project.
