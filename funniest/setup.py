@@ -1,8 +1,10 @@
 from setuptools import setup
 
+
 def readme():
-    with open('README.rst.example') as f:
+    with open('README.rst') as f:
         return f.read()
+
 
 setup(name='funniest',
       version='0.1',

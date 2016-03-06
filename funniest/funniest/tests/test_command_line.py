@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from funniest.cmd import main
+from funniest.command_line import main
 
 
 class TestCmd(TestCase):
