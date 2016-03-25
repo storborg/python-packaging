@@ -17,7 +17,7 @@ Python module/package names should generally follow the following constraints:
 
 * All lowercase
 * Unique on pypi, even if you don't want to make your package publicly available (you might want to specify it privately as a dependency later)
-* Underscore-separated or no word seperators at all (don't use hyphens)
+* Underscore-separated or no word separators at all (don't use hyphens)
 
 We've decided to turn our bit of code into a module called **funniest**.
 
