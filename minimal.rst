@@ -56,11 +56,11 @@ The main setup config file, ``setup.py``, should contain a single call to ``setu
 
 Now we can install the package locally (for use on our system), with::
 
-    $ python setup.py install
+    $ pip install .
 
 We can also install the package with a symlink, so that changes to the source files will be immediately available to other users of the package on our system::
 
-    $ python setup.py develop
+    $ pip install -e .
 
 Anywhere else in our system using the same Python, we can do this now::
 
@@ -107,11 +107,7 @@ For a detailed list of all available setup.py commands, do::
 Installing the Package
 ~~~~~~~~~~~~~~~~~~~~~~
 
-At this point, other consumers of this package can install the package with ``easy_install``::
-
-    easy_install funniest
-
-Or better yet, ``pip``::
+At this point, other consumers of this package can install the package with ``pip``::
 
     $ pip install funniest
 
