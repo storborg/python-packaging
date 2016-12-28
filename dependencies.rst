@@ -7,7 +7,7 @@ Fortunately, setuptools makes it easy for us to specify those dependencies (assu
 
 We can add some formatting spice to the **funniest** joke with `Markdown <http://pypi.python.org/pypi/Markdown/>`_.
 
-In ``__init__.py``::
+In ``text.py``::
 
     from markdown import markdown
 
