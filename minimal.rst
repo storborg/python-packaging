@@ -71,13 +71,46 @@ Anywhere else in our system using the same Python, we can do this now::
 Publishing On PyPI
 ~~~~~~~~~~~~~~~~~~
 
-The ``setup.py`` script is also our main entrypoint to register the package name on PyPI and upload source distributions.
+Firstly we have to configure python index repositories that we want to publish
+our packages.  We can do this by editing `$HOME/.pypirc` file. If this file
+does not exit, please create a new one. The following is a minimal template
+that you can start with.
 
-To "register" the package (this will reserve the name, upload package metadata, and create the pypi.python.org webpage)::
+.. code-block:: bash
 
-    $ python setup.py register
+    [distutils]
+    index-servers =
+    pypi
+    pypitest
 
-If you haven't published things on PyPI before, you'll need to create an account by following the steps provided at this point.
+    [pypi]
+    repository=https://pypi.python.org/pypi
+    username=<your username>
+
+    [pypitest]
+    repository=https://testpypi.python.org/pypi
+    username=<your username>
+
+The `username` is the account name that we use to login index server. We can
+also specify `password`, however we don't suggest because it is not secure. If
+we don't specify `password`, the system will ask password when we try to
+publish a package.
+
+The above configuration defines two repositories: 1) live repository (a.k.a
+pypi) where official releases of our package should reside; 2) test repository
+(a.k.a pypitest) where we can test integrity of our packages before releasing
+them to live repository. We suggest to always publish your package to
+testreposity first to check at least whether package is configured correctly or
+not. After ensuring that package is valid, you can publish to live repository.
+For more details about `.pypirc` file, please check following documentation.
+
+https://docs.python.org/2/distutils/packageindex.html
+
+The ``setup.py`` script is our main entrypoint to register the package name on PyPI and upload source distributions.
+
+To "register" the package (this will reserve the name, upload package metadata, and create the pypi.python.org webpage (because we use pypi repository))::
+
+    $ python setup.py register -r pypi
 
 At this point you can view the (very minimal) page on PyPI describing **funniest**:
 
@@ -87,17 +120,17 @@ Although users can follow the URL link to find our git repository, we'll probabl
 
 First create a source distribution with::
 
-    $ python setup.py sdist
+    $ python setup.py sdist -r pypi
 
 This will create ``dist/funniest-0.1.tar.gz`` inside our top-level directory. If you like, copy that file to another host and try unpacking it and install it, just to verify that it works for you.
 
 That file can then be uploaded to PyPI with::
 
-    $ python setup.py sdist upload
+    $ python setup.py sdist upload -r pypi
 
 You can combine all of these steps, to update metadata and publish a new build in a single step::
 
-    $ python setup.py register sdist upload
+    $ python setup.py register sdist upload -r pypi
 
 For a detailed list of all available setup.py commands, do::
 
