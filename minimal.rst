@@ -129,7 +129,7 @@ For example, let's move our one function to a new ``text`` submodule, so our dir
 
 In ``__init__.py``::
 
-    from .text import joke
+    from funniest import text
 
 In ``text.py``::
 
