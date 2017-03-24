@@ -65,7 +65,7 @@ Packages Not On PyPI
 
 Sometimes you'll want to use packages that are properly arranged with setuptools, but aren't published to PyPI. In those cases, you can specify a list of one or more ``dependency_links`` URLs where the package can be downloaded, along with some additional hints, and setuptools will find and install the package correctly.
 
-*Edit on 2017-03-23 : Dependency Links are now considered as depecrated in Python Wheels*
+*Edit on 2017-03-23 : Dependency Links are now considered as deprecated in Python Wheels. `pip install` would not consider `dependency_links` in the installation.*
 
 *Reference: http://serverfault.com/questions/608192/pip-install-seems-to-be-ignoring-dependency-links *
 
