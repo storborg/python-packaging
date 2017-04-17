@@ -73,11 +73,37 @@ Publishing On PyPI
 
 The ``setup.py`` script is also our main entrypoint to register the package name on PyPI and upload source distributions.
 
-To "register" the package (this will reserve the name, upload package metadata, and create the pypi.python.org webpage)::
+Create an account
+-----------------
 
-    $ python setup.py register
+First, you need a :term:`PyPI <Python Package Index (PyPI)>` user
+account. There are two options:
 
-If you haven't published things on PyPI before, you'll need to create an account by following the steps provided at this point.
+1. Create an account manually `using the form on the PyPI website
+   <https://pypi.python.org/pypi?%3Aaction=register_form>`_.
+
+2. **(Not recommended):** Have an account created as part of
+   registering your first project (not recommended due to the
+   related security concerns.).
+
+To "register" the package (this will reserve the name, upload package metadata, and create the pypi.python.org webpage) there are three methods::
+
+1. Use `the form on the PyPI website
+   <https://pypi.python.org/pypi?%3Aaction=submit_form>`_, to upload your
+   ``PKG-INFO`` info located in your local project tree at
+   ``myproject.egg-info/PKG-INFO``.  If you don't have that file or directory,
+   then run ``python setup.py egg_info`` to have it generated.
+2. Run ``twine register dist/mypkg.whl``, and :ref:`twine` will register your project
+   based on the package metadata in the specified files. Your ``~/.pypirc``
+   must already be appropriately configured for twine to work. You will also need to have twine installed.
+   You can install twine by running ``pip install twine``
+3. **(Not recommended):** Run ``python setup.py register``.  If you don't have
+   a user account already, a wizard will create one for you. This approach is
+   covered here due to it being mentioned in other guides, but it is not
+   recommended as it may use a plaintext HTTP or unverified HTTPS connection
+   on some Python versions, allowing your username and password to be intercepted
+   during transmission.
+
 
 At this point you can view the (very minimal) page on PyPI describing **funniest**:
 
@@ -91,13 +117,42 @@ First create a source distribution with::
 
 This will create ``dist/funniest-0.1.tar.gz`` inside our top-level directory. If you like, copy that file to another host and try unpacking it and install it, just to verify that it works for you.
 
-That file can then be uploaded to PyPI with::
+That file can then be uploaded to PyPI using one of the two options::
 
-    $ python setup.py sdist upload
+1. Use :ref:`twine`
 
-You can combine all of these steps, to update metadata and publish a new build in a single step::
+   ::
 
-    $ python setup.py register sdist upload
+     twine upload dist/*
+
+   The biggest reason to use twine is that ``python setup.py upload`` (option #2
+   below) uploads files over plaintext. This means anytime you use it you expose
+   your username and password to a MITM attack. Twine uses only verified TLS to
+   upload to PyPI in order to protect your credentials from theft.
+
+   Secondly it allows you to precreate your distribution files.  ``python
+   setup.py upload`` only allows you to upload something that you've created in
+   the same command invocation. This means that you cannot test the exact file
+   you're going to upload to PyPI to ensure that it works before uploading it.
+
+   Finally it allows you to pre-sign your files and pass the .asc files into the
+   command line invocation (``twine upload twine-1.0.1.tar.gz
+   twine-1.0.1.tar.gz.asc``). This enables you to be assured that you're typing
+   your gpg passphrase into gpg itself and not anything else since *you* will be
+   the one directly executing ``gpg --detach-sign -a <filename>``.
+
+
+2. **(Not recommended):** Use :ref:`setuptools`:
+
+   ::
+
+    python setup.py bdist_wheel sdist upload
+
+   This approach is covered here due to it being mentioned in other guides, but it
+   is not recommended as it may use a plaintext HTTP or unverified HTTPS connection
+   on some Python versions, allowing your username and password to be intercepted
+   during transmission.
+
 
 For a detailed list of all available setup.py commands, do::
 
