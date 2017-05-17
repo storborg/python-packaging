@@ -3,7 +3,7 @@ Adding Non-Code Files
 
 Often packages will need to depend on files which are not ``.py`` files: e.g. images, data tables, documentation, etc. Those files need special treatment in order for setuptools to handle them correctly.
 
-The mechanism that provides this is the ``MANIFEST.in`` file. This is relatively quite simple: ``MANIFEST.in`` is really just a list of relative file paths specifying files or globs to include.::
+The mechanism that provides this is the ``MANIFEST.in`` file which goes at the root of your SCM repo. This is relatively quite simple: ``MANIFEST.in`` is really just a list of relative file paths specifying files or globs to include.::
 
     include README.rst
     include docs/*.txt
