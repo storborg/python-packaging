@@ -153,7 +153,7 @@ There's one more thing we'll probably want in a 'bare bones' package: a ``.gitig
 
     # Python egg metadata, regenerated from source files by setuptools.
     /*.egg-info
-
+    /*.egg
 
 That's All You Need
 ~~~~~~~~~~~~~~~~~~~
