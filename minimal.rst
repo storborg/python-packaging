@@ -71,6 +71,9 @@ Anywhere else in our system using the same Python, we can do this now::
 Publishing On PyPI
 ~~~~~~~~~~~~~~~~~~
 
+This part of the tutorial has some major security issues. See https://packaging.python.org/tutorials/distributing-packages/#uploading-your-project-to-pypi for more details. Use twine to securely upload your package. 
+
+
 The ``setup.py`` script is also our main entrypoint to register the package name on PyPI and upload source distributions.
 
 To "register" the package (this will reserve the name, upload package metadata, and create the pypi.python.org webpage)::
