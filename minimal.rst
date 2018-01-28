@@ -71,37 +71,44 @@ Anywhere else in our system using the same Python, we can do this now::
 Publishing On PyPI
 ~~~~~~~~~~~~~~~~~~
 
+
+We'll probably want to upload a source distribution so that the package can be installed without cloning the repository. This will also enable automated installation and dependency resolution tools to install our package.
+
+First create a source distribution with the setup.py command::
+
+    $ python setup.py sdist
+    running sdist
+        ...
+    Writing funniest-0.1/setup.cfg
+    Creating tar archive
+
+This will create ``dist/funniest-0.1.tar.gz`` inside our top-level directory. If you like, copy that file to another host and try unpacking it and install it, just to verify that it works for you. The s in sdist is for ‘source’. You can also create pre-built wheels by using bdist, for more information about those, see PyPA’s page on packaging.
+
+We can see in the run output that our package has been built.
+
+Now that we have our built package, we can proceed to upload our code. PyPA recommends using Twine rather than setup.py commands, as setup.py may transmit your passwords in plaintext. So we will need to install Twine.
+    
+    $ pip install twine
+
+After Twine is installed, we can open the Terminal (Alt+F12) and run
+
+    $ twine upload dist/*
+
+This will reserve the name, upload package metadata, and create the pypi.python.org webpage.
+
 The ``setup.py`` script is also our main entrypoint to register the package name on PyPI and upload source distributions.
 
-To "register" the package (this will reserve the name, upload package metadata, and create the pypi.python.org webpage)::
+[Warning: the ``python setup.py`` method might not work anymore and if it does, might be less secure. Just make an account online.]
+The other way to "register" the package ()::
 
     $ python setup.py register
 
 If you haven't published things on PyPI before, you'll need to create an account by following the steps provided at this point.
 
+
 At this point you can view the (very minimal) page on PyPI describing **funniest**:
 
 http://pypi.python.org/pypi/funniest/0.1
-
-Although users can follow the URL link to find our git repository, we'll probably want to upload a source distribution so that the package can be installed without cloning the repository. This will also enable automated installation and dependency resolution tools to install our package.
-
-First create a source distribution with::
-
-    $ python setup.py sdist
-
-This will create ``dist/funniest-0.1.tar.gz`` inside our top-level directory. If you like, copy that file to another host and try unpacking it and install it, just to verify that it works for you.
-
-That file can then be uploaded to PyPI with::
-
-    $ python setup.py sdist upload
-
-You can combine all of these steps, to update metadata and publish a new build in a single step::
-
-    $ python setup.py register sdist upload
-
-For a detailed list of all available setup.py commands, do::
-
-    $ python setup.py --help-commands
 
 
 Installing the Package
