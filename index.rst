@@ -8,7 +8,7 @@ In particular, packages should make it easy:
 * To install with ``pip`` or ``easy_install``.
 * To specify as a dependency for another package.
 * For other users to download and run tests.
-* For other users to work on and have immediate familiary with the basic directory structure.
+* For other users to work on and have immediate familiarity with the basic directory structure.
 * To add and distribute documentation.
 
 We'll walk through the basic steps of building up a contrived package **funniest** to support these things.
