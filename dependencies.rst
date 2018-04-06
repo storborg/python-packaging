@@ -33,7 +33,7 @@ Now our package depends on the ``markdown`` package. To note that in ``setup.py`
           ],
           zip_safe=False)
 
-To prove this works, we can run ``python setup.py develop`` again, and we'll see::
+To prove this works, we can run ``python setup.py develop``, and we'll see::
 
     $ python setup.py develop
     running develop
