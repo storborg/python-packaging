@@ -1,7 +1,7 @@
 Let There Be Tests
 ==================
 
-The **funniest** package needs some tests. These should be placed in a submodule of ``funniest.`` so that they can be imported, but won't pollute the global namespace.::
+The **funniest** package needs some tests. These should be placed in a submodule of ``funniest`` so that they can be imported, but won't pollute the global namespace::
 
     funniest/
         funniest/
@@ -12,7 +12,7 @@ The **funniest** package needs some tests. These should be placed in a submodule
         setup.py
         ...
 
-The ``test_joke.py`` file is our first test file. Although it's overkill for now, we'll use a ``unittest.TestCase`` subclass to provide infrastructure for later development.::
+The ``test_joke.py`` file is our first test file. Although it's overkill for now, we'll use a ``unittest.TestCase`` subclass to provide infrastructure for later development::
 
     from unittest import TestCase
 
