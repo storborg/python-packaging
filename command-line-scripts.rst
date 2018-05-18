@@ -65,7 +65,7 @@ The ``command_line.py`` submodule exists only to service the command line tool (
     import funniest
 
     def main():
-        print funniest.joke()
+        print(funniest.joke())
 
 You can test the "script" by running it directly, e.g.::
 
