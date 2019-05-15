@@ -62,7 +62,7 @@ When we publish this to PyPI, calling ``pip install funniest`` or similar will a
 
 Packages Not On PyPI
 ~~~~~~~~~~~~~~~~~~~~
-Sometimes you'll want to use packages that are properly arranged with setuptools, but aren't published to PyPI. In those cases, if you have pip version>=19.1, you can specify url of package in install_requires in PEP 508 format.
+Sometimes you'll want to use packages that are properly arranged with setuptools, but aren't published to PyPI. In those cases, if you have pip version>=18.1, you can specify url of package in install_requires in PEP 508 format.
 
 For example, if a library is published on GitHub, you can specify it like::
 
