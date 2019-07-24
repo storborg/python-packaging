@@ -1,7 +1,7 @@
 Minimal Structure
 =================
 
-We'll start with some Python code. Native German speakers, `please proceed with caution <http://www.youtube.com/watch?v=ienp4J3pW7U>`_::
+We'll start with some Python code. Native German speakers, `please proceed with caution <http://www.youtube.com/watch?v=rGbe5qy5274>`_::
 
     def joke():
         return (u'Wenn ist das Nunst\u00fcck git und Slotermeyer? Ja! ... '
