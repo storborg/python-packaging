@@ -63,12 +63,12 @@ When we publish this to PyPI, calling ``pip install funniest`` or similar will a
 Packages Not On PyPI
 ~~~~~~~~~~~~~~~~~~~~
 
-Sometimes you'll want to use packages that are properly arranged with setuptools, but aren't published to PyPI. In those cases, you can specify a list of one or more ``dependency_links`` URLs where the package can be downloaded, along with some additional hints, and setuptools will find and install the package correctly.
+Sometimes you'll want to use packages that are properly arranged with setuptools, but aren't published to PyPI. In those cases, you can directly specify in ``install_requries`` with the syntax ``package_name @ URL`` (checkout PEP 508 for syntax) the URLs where the package can be downloaded, along with some additional hints, and setuptools will find and install the package correctly.
 
 For example, if a library is published on GitHub, you can specify it like::
 
     setup(
         ...
-        dependency_links=['http://github.com/user/repo/tarball/master#egg=package-1.0']
+        install_requires=['repo @ git+http://github.com/user/repo/']
         ...
     )
