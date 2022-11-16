@@ -10,7 +10,7 @@ There are two mechanisms that ``setuptools.setup()`` provides to do this: the ``
 The ``scripts`` Keyword Argument
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The first approach is to write your script in a separate file, such as you might write a shell script.::
+The first approach is to write your script in a separate file, such as you might write a shell script::
 
     funniest/
         funniest/
